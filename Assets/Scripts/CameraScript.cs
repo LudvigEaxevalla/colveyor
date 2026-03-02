@@ -7,13 +7,22 @@ public class CameraScript : MonoBehaviour
     [SerializeField] private float minZoom = 2f;
     [SerializeField] private float maxZoom = 20f;
     private float velocity = 0f;
-    private float smoothTime = 0.25f;
+    private float smoothTime = 1f;
+    [SerializeField] private float camSpeed = 10f;
+    public GridManager Grid;
+
+    
 
     [SerializeField] private Camera cam;
 
     private void Start()
     {
         zoom = cam.orthographicSize;
+    }
+    private void Awake()
+    {
+        
+        Grid = GameObject.Find("GridManager").GetComponent<GridManager>();
     }
 
     private void Update()
@@ -22,5 +31,37 @@ public class CameraScript : MonoBehaviour
         zoom -= scroll * zoomMultiplier;
         zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
         cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, zoom, ref velocity, smoothTime);
+
+        if (transform.position.x < Grid.width - 1f)
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector3.right * camSpeed * Time.deltaTime);
+            }
+        }
+
+        if (transform.position.y < Grid.height - 1f)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(Vector3.up * camSpeed * Time.deltaTime);
+            }
+        }
+
+        if (transform.position.x > 0f)
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(Vector3.left * camSpeed * Time.deltaTime);
+            }
+        }
+        
+        if (transform.position.y > 0f)
+        {
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(Vector3.down * camSpeed * Time.deltaTime);
+            }
+        }
     }
 }

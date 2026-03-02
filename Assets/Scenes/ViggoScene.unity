@@ -351,6 +351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZoom: 2
   maxZoom: 20
+  camSpeed: 20
+  Grid: {fileID: 0}
   cam: {fileID: 1936843153}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
