@@ -9,6 +9,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Tile tileprefab;
 
     [SerializeField] private Transform _camera;
+    [SerializeField] private Transform tileparent;
 
     void Start()
     {
@@ -21,10 +22,10 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                var spawnedTile = Instantiate(tileprefab, new Vector3(x, y), Quaternion.identity);
+                var spawnedTile = Instantiate(tileprefab, new Vector3(x, y), Quaternion.identity, tileparent);
                 spawnedTile.name = $"Tile {x} {y}";
 
-                var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
+                var isOffset = (x+y) % 2 == 1;
                 spawnedTile.Init(isOffset);
             } 
         }
