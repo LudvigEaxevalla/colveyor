@@ -208,6 +208,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7366edd56d96b534ebd79f36a194547e, type: 2}
+    - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
       propertyPath: image
       value: 
       objectReference: {fileID: 1980365024}
@@ -339,6 +343,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b8138048602df140baabc06976366c1, type: 2}
     - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
       propertyPath: image
       value: 
@@ -630,7 +638,8 @@ MonoBehaviour:
   cursorTexture:
   - {fileID: 2800000, guid: 840ecf63bf366b24da951af0fdc6640a, type: 3}
   - {fileID: 2800000, guid: 467bb5b94e7198e4e80e4adf07c14a5b, type: 3}
-  - {fileID: 2800000, guid: 0e2f7a29bb24a8044b7c5dc3f1a63500, type: 3}
+  - {fileID: 2800000, guid: 6831db8286b4e6f4c8c19eecc317a15e, type: 3}
+  - {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
 --- !u!4 &1678209059
