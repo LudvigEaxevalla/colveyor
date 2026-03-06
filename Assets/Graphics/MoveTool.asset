@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65bf3423d977322428f843028e5d5089, type: 3}
-  m_Name: Select
+  m_Name: MoveTool
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
   type: 0
   range: {x: 5, y: 4}
-  image: {fileID: -3697856861328326303, guid: c5a38ff630611264ba3a24acbee8b5fc, type: 3}
+  image: {fileID: -5614858768650045287, guid: 6831db8286b4e6f4c8c19eecc317a15e, type: 3}

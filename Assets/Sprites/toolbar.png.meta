@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 391d94a4e35cbb346af870f15f72b93b
+guid: ea379c9362b14154c85ac539899835a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4316243662377544990
-    second: ConveyorBelt3_0
+      213: 7523840268516316155
+    second: toolbar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ConveyorBelt3_0
+      name: toolbar_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 200
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e294fbe14f9914c0800000000000000
-      internalID: -4316243662377544990
+      spriteID: bf3d1b77cdc0a6860800000000000000
+      internalID: 7523840268516316155
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ConveyorBelt3_0: -4316243662377544990
+      toolbar_0: 7523840268516316155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
