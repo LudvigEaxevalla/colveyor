@@ -15,4 +15,4 @@ MonoBehaviour:
   tile: {fileID: 0}
   type: 0
   range: {x: 5, y: 4}
-  image: {fileID: 2514794820251942054, guid: 4b00d2fd6e5ee4247a0e33bd05bdbadc, type: 3}
+  image: {fileID: -8080613815223710409, guid: 4b00d2fd6e5ee4247a0e33bd05bdbadc, type: 3}
