@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] public int width, height;
+    public int width, height;
 
     [SerializeField] private Tile tileprefab;
 

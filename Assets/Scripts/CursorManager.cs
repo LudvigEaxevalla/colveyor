@@ -6,7 +6,6 @@ public class CursorManager : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
     }
@@ -17,7 +16,6 @@ public class CursorManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
