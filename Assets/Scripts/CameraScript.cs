@@ -7,21 +7,16 @@ public class CameraScript : MonoBehaviour
     [SerializeField] private float minZoom = 2f;
     [SerializeField] private float maxZoom = 20f;
     private float velocity = 0f;
-    private float smoothTime = 1f;
+    [SerializeField] private float smoothTime = 0.1f;
     [SerializeField] private float camSpeed = 10f;
     public GridManager Grid;
-
     
 
     [SerializeField] private Camera cam;
 
-    private void Start()
-    {
-        zoom = cam.orthographicSize;
-    }
     private void Awake()
     {
-        
+        zoom = cam.orthographicSize;
         Grid = GameObject.Find("GridManager").GetComponent<GridManager>();
     }
 
