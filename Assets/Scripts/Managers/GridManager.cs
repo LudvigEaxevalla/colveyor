@@ -5,18 +5,19 @@ using UnityEngine.Tilemaps;
 public class GridManager : MonoBehaviour
 {
     public int width, height;
+    public static GridManager instance;
 
     [SerializeField] private Tile tileprefab;
 
     [SerializeField] private Transform _camera;
     [SerializeField] private Transform tileparent;
 
-    void Start()
+    private void Awake()
     {
-        GenerateGrid();
+        instance = this;
     }
 
-    void GenerateGrid()
+    public void GenerateGrid()
     {
         for (int x = 0; x < width; x++)
         {
