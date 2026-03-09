@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 1809763874}
-  colorOneTest: {r: 0, g: 0, b: 0, a: 1}
-  colorTwoTest: {r: 1, g: 1, b: 1, a: 1}
+  colorOneTest: {r: 0.4056604, g: 0.36279002, b: 0.695, a: 1}
+  colorTwoTest: {r: 0.6037736, g: 0.851, b: 0.326, a: 1}
 --- !u!212 &1809763874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ Transform:
   m_GameObject: {fileID: 1809763872}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64, y: -0.4514, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.04, z: 0}
   m_LocalScale: {x: 2.3998976, y: 2.2026722, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
