@@ -26,7 +26,7 @@ public class PlacementScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
             Vector3 mouseWorldPosition = Input.mousePosition;
-            Instantiate(TestTile, cellPosition, Quaternion.identity);
+            Instantiate(TestTile, mouseWorldPosition, Quaternion.identity);
         }
         if (Input.GetKeyDown("1"))
         {
