@@ -17,7 +17,7 @@ public class CameraScript : MonoBehaviour
     private void Awake()
     {
         zoom = cam.orthographicSize;
-        Grid = GameObject.Find("GridManager").GetComponent<GridManager>();
+       // Grid = GameObject.Find("GridManager").GetComponent<GridManager>();
     }
 
     private void Update()
