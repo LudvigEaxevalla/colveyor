@@ -106,6 +106,7 @@ MonoBehaviour:
   offsetcolor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
   _renderer: {fileID: 396698233940658078}
   highlight: {fileID: 6618822813556178713}
+  conveyor: {fileID: 2930600360201932943, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
 --- !u!61 &-8437864789413836231
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a81f62081fed8444af7e7e5af7af8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTile: {fileID: 0}
   itemSpacing: 1
   speed: 3
   lineRenderer: {fileID: 5990726627840733475}
@@ -158,3 +159,5 @@ MonoBehaviour:
   - item: {fileID: 0}
     currentLerp: 0
     endPoint: 1
+  isPlacing: 0
+  beltIndex: 0
