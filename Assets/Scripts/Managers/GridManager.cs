@@ -28,9 +28,12 @@ public class GridManager : MonoBehaviour
 
                 var isOffset = (x+y) % 2 == 1;
                 spawnedTile.Init(isOffset);
+
             } 
         }
 
         _camera.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
+
+        
     }
 }
