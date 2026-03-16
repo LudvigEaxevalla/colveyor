@@ -239,7 +239,7 @@ LineRenderer:
     alignment: 1
     textureMode: 1
     textureScale: {x: 1, y: 1}
-    shadowBias: 0.5
+    shadowBias: 0
     generateLightingData: 0
   m_MaskInteraction: 0
   m_UseWorldSpace: 1
@@ -272,27 +272,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a81f62081fed8444af7e7e5af7af8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemSpacing: 1
   speed: 3
   lineRenderer: {fileID: 186477655}
   items:
   - item: {fileID: 409251670}
     currentLerp: 0
-    endPoint: 0
+    endPoint: 1
   - item: {fileID: 1670119314}
     currentLerp: 0
-    endPoint: 0
+    endPoint: 1
   - item: {fileID: 429227687}
     currentLerp: 0
-    endPoint: 0
+    endPoint: 1
   - item: {fileID: 2136870514}
     currentLerp: 0
-    endPoint: 0
+    endPoint: 1
   - item: {fileID: 1072124463}
     currentLerp: 0
-    endPoint: 0
+    endPoint: 1
   - item: {fileID: 1712557810}
     currentLerp: 0
-    endPoint: 0
+    endPoint: 1
 --- !u!1 &409251667
 GameObject:
   m_ObjectHideFlags: 0
