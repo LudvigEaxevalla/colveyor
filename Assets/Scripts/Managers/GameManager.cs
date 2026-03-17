@@ -5,8 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Gamestate State; 
-
+    public Gamestate State;
+    public GameObject lastTile;
+    //spara senaste tile jag kolliderat med
     public static event Action<Gamestate> OnGameStateChange;
 
     private void Awake()
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
         }
         OnGameStateChange?.Invoke(newState);
 
-}
+    }
 }
 public enum Gamestate
 {
