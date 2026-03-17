@@ -255,7 +255,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &486075840
+--- !u!1001 &405022354
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -263,10 +263,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2930600360201932943, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
-      propertyPath: isPlacing
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3158078105494284343, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
       propertyPath: m_Name
       value: ConveyorBelt
@@ -421,17 +417,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
---- !u!114 &580959980 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2930600360201932943, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
-  m_PrefabInstance: {fileID: 486075840}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a81f62081fed8444af7e7e5af7af8e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1173511851
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +699,7 @@ MonoBehaviour:
   - {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
-  conveyor: {fileID: 580959980}
+  conveyor: {fileID: 2930600360201932943, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
 --- !u!4 &1678209059
 Transform:
   m_ObjectHideFlags: 0
@@ -1272,4 +1257,4 @@ SceneRoots:
   - {fileID: 1678209059}
   - {fileID: 2024470642}
   - {fileID: 2013185497}
-  - {fileID: 486075840}
+  - {fileID: 405022354}
