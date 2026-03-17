@@ -210,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 655cc4d540ff16649ab00451658c6d43, type: 2}
+      objectReference: {fileID: 11400000, guid: 7366edd56d96b534ebd79f36a194547e, type: 2}
     - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
       propertyPath: image
       value: 
@@ -426,7 +426,7 @@ PrefabInstance:
     - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 655cc4d540ff16649ab00451658c6d43, type: 2}
+      objectReference: {fileID: 11400000, guid: 8b8138048602df140baabc06976366c1, type: 2}
     - target: {fileID: 4243157726354486137, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
       propertyPath: image
       value: 
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41509432, g: 0.24083303, b: 0.24083303, a: 1}
+  m_Color: {r: 0.2710039, g: 0.3962264, b: 0.37707472, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1173511854
 CanvasRenderer:
@@ -718,7 +718,8 @@ MonoBehaviour:
   cursorTexture:
   - {fileID: 2800000, guid: 840ecf63bf366b24da951af0fdc6640a, type: 3}
   - {fileID: 2800000, guid: 467bb5b94e7198e4e80e4adf07c14a5b, type: 3}
-  - {fileID: 2800000, guid: 0e2f7a29bb24a8044b7c5dc3f1a63500, type: 3}
+  - {fileID: 2800000, guid: 6831db8286b4e6f4c8c19eecc317a15e, type: 3}
+  - {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
 --- !u!4 &1678209059
@@ -746,6 +747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1704093022}
   - component: {fileID: 1704093020}
+  - component: {fileID: 1704093023}
   m_Layer: 0
   m_Name: GridManager
   m_TagString: Untagged
@@ -785,6 +787,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 520061813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704093023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704093019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c22a57dbeaeabd4a83284f1495ef443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TestTile: {fileID: 1631565176136147707, guid: dce8e1545f88bf3429641cd61f289341, type: 3}
 --- !u!224 &1802148745 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1791160840039081998, guid: d3070bb7f32369543ad2303d569d4f0b, type: 3}
@@ -955,7 +970,7 @@ MonoBehaviour:
   maxZoom: 20
   smoothTime: 0.1
   camSpeed: 20
-  Grid: {fileID: 0}
+  Grid: {fileID: 1704093020}
   cam: {fileID: 1936843153}
 --- !u!114 &1980365024 stripped
 MonoBehaviour:
