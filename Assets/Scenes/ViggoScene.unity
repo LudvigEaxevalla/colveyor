@@ -249,12 +249,71 @@ Transform:
   m_GameObject: {fileID: 160456055}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.01934, y: 25.291601, z: -0.16653952}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!1001 &405022354
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3158078105494284343, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_Name
+      value: ConveyorBelt
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619804775503936534, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
+=======
 --- !u!1 &425732185
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +394,7 @@ Transform:
   - {fileID: 1704093022}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> main
 --- !u!1001 &566069144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -722,6 +782,7 @@ MonoBehaviour:
   - {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
+  conveyor: {fileID: 2930600360201932943, guid: 1f8516a2c8ba0aa41a723d2221a7ba6d, type: 3}
 --- !u!4 &1678209059
 Transform:
   m_ObjectHideFlags: 0
@@ -730,8 +791,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678209057}
   serializedVersion: 2
+<<<<<<< HEAD
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+=======
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -194.51833, y: -93.59404, z: 9.976555}
+>>>>>>> main
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -794,7 +860,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704093019}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c22a57dbeaeabd4a83284f1495ef443, type: 3}
   m_Name: 
@@ -1131,7 +1197,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1936843153}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1277,4 +1343,8 @@ SceneRoots:
   - {fileID: 160456056}
   - {fileID: 2024470642}
   - {fileID: 2013185497}
+<<<<<<< HEAD
+  - {fileID: 405022354}
+=======
   - {fileID: 520061813}
+>>>>>>> main
