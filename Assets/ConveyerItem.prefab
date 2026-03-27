@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2564469918481039289}
   - component: {fileID: 624349011570944844}
   - component: {fileID: 3391456172395756615}
+  - component: {fileID: 5921364911307111236}
   m_Layer: 0
   m_Name: ConveyerItem
   m_TagString: Untagged
@@ -103,3 +104,18 @@ MonoBehaviour:
   sprite: {fileID: 624349011570944844}
   colorA: {r: 1, g: 1, b: 1, a: 1}
   colorB: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &5921364911307111236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954386181266185610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c79ff794c8018046932918df093cd25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMap: {fileID: 5631892287727110747, guid: 8e1ad925214b6234a8fdbba39f69cee1, type: 3}
+  tileToCheckFor: {fileID: 11400000, guid: d2f4bf25c3849a840bcd3f8c34ce458a, type: 2}
+  tileMakeMeMoveRight: {fileID: 0}

@@ -5,7 +5,6 @@ public class LevelEditor : MonoBehaviour
 {
     [SerializeField] Tilemap currentTilemap;
     [SerializeField] TileBase _currentTile;
-    public GameObject currentTile;
 
     [SerializeField] Camera cam;
 
