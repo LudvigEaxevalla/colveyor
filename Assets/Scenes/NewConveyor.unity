@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1661068130}
   - component: {fileID: 1661068129}
+  - component: {fileID: 1661068131}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -301,6 +302,21 @@ Transform:
   - {fileID: 1878730121}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1661068131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661068128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559c349a89fb6554eaad39b56cd9f080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTilemap: {fileID: 1878730123}
+  currentTile: {fileID: 11400000, guid: d2f4bf25c3849a840bcd3f8c34ce458a, type: 2}
+  cam: {fileID: 1091684056}
 --- !u!1 &1878730120
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,15 +412,53 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: 1e-45
+      e01: 0
+      e02: 1e-45
+      e03: 2.8991062e+10
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 5.97e-43
+      e20: 7.602218e+11
+      e21: 2.8991062e+10
+      e22: -3.019347e+19
+      e23: -0.000000003357977
+      e30: 4.5914e-41
+      e31: 5.97e-43
+      e32: 5.97e-43
+      e33: 5.97e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: -0.0000000033579681, g: -0.0000000033579681, b: -0.0000000033579681, a: -0.0000000033579681}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
+  m_Origin: {x: -14, y: -5, z: 0}
+  m_Size: {x: 26, y: 9, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
