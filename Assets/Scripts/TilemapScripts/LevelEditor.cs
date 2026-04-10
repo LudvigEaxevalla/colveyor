@@ -6,8 +6,8 @@ using static UnityEditor.PlayerSettings;
 public class LevelEditor : MonoBehaviour
 {
     [SerializeField] Tilemap currentTilemap;
-    public List<TileBase> tileRules = new();
-    private int currentTileIndex = 0;
+    public TileBase defaultConveyor;
+    public List<TileBase> corners = new();
     public bool placingConveyor;
     public bool placingColorHouse;
     public CursorManager cursor;
@@ -28,14 +28,16 @@ public class LevelEditor : MonoBehaviour
             PlacingColorHouse();
         }
 
+
     }
 
     void PlacingConveyor()
     {
+
         Vector3Int pos = currentTilemap.WorldToCell(cam.ScreenToWorldPoint(Input.mousePosition));
+        CheckCorner(pos);
         if (Input.GetKeyDown(KeyCode.R))
         {
-            currentTileIndex = (currentTileIndex + 1) % tileRules.Count;
             if (!cursor.placeHighlight.flipX)
             {
                 cursor.placeHighlight.flipX = true;
@@ -76,12 +78,28 @@ public class LevelEditor : MonoBehaviour
 
     void PlaceTile(Vector3Int pos)
     {
-        currentTilemap.SetTile(pos, tileRules[currentTileIndex]);
+        currentTilemap.SetTile(pos, defaultConveyor);
     }
 
     void DeleteTile(Vector3Int pos)
     {
         currentTilemap.SetTile(pos, null);
+    }
+
+    void CheckCorner(Vector3Int pos)
+    {
+        Vector3Int topRight = (pos + new Vector3Int(-1, -1, 0));
+        Vector3Int topLeft = (pos + new Vector3Int(1, -1, 0));
+        Vector3Int bottomRight = (pos + new Vector3Int(-1, 1, 0));
+        Vector3Int bottomLeft = (pos + new Vector3Int(1, 1, 0));
+
+        if (currentTilemap.GetTile(topRight) != null)
+        {
+            Debug.Log("is null");
+            currentTilemap.SetTile(pos, corners[0]);
+
+
+        }
     }
 
 }

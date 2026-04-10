@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: conveyor_tileset_ph-Sheet_5_0
+  m_Name: Right
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -283794397834029715, guid: c28eb0299b184a842be4f0f4ba621038, type: 3}
+  m_Sprite: {fileID: -2031921628975916419, guid: dac2eb8a4cf89fa4e9e8feb7d91c33db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
