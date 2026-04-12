@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TileChecker : MonoBehaviour
 {
     public Tilemap tileMap;
-    public TileBase tileToCheckFor;
+    public List<TileBase> tileCheck;
+    private int tileIndex = -1;
 
 
     void Update()
@@ -12,12 +15,12 @@ public class TileChecker : MonoBehaviour
         Vector3Int pos = tileMap.WorldToCell(transform.position);
 
         TileBase tile = tileMap.GetTile(pos);
+    }
 
-        if (tile == tileToCheckFor)
-        {
-            Debug.Log("I detect a desired tile!");
-            transform.Translate(Vector3.right * Time.deltaTime);
-        }
 
+    void GetDirection(Vector3Int pos)
+    {
+        if (tileMap == null) return;
+        if (tileCheck == null) return;
     }
 }
