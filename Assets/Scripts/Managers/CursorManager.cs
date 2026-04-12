@@ -5,15 +5,20 @@ public class CursorManager : MonoBehaviour
     public Texture2D[] cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
+    public SpriteRenderer placeHighlight;
 
-    public ConveyorBeltScript conveyor;
+    [SerializeField] Camera cam;
+
+    //public ConveyorBeltScript conveyor;
+
+    public LevelEditor placing;
 
 
     public enum cursorState
     {
         Select,
         Conveyor,
-        Third,
+        ColorHouse,
         Fourth
     }
 
@@ -23,7 +28,7 @@ public class CursorManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) TransitionTo(cursorState.Select);
         if (Input.GetKeyDown(KeyCode.Alpha2)) TransitionTo(cursorState.Conveyor);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) TransitionTo(cursorState.Third);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) TransitionTo(cursorState.ColorHouse);
         if (Input.GetKeyDown(KeyCode.Alpha4)) TransitionTo(cursorState.Fourth);
     }
 
@@ -31,6 +36,7 @@ public class CursorManager : MonoBehaviour
     {
         currentState = cursorState.Select;
         Debug.Log("Sate is: " + currentState);
+        placeHighlight.enabled = false;
     }
 
     private void TransitionTo(cursorState newState)
@@ -54,12 +60,16 @@ public class CursorManager : MonoBehaviour
 
             case cursorState.Conveyor:
                 ChangeCursor(1);
-                conveyor.isPlacing = true;
+                //conveyor.isPlacing = true;
+                placing.placingConveyor = true;
+                placeHighlight.enabled = true;
+                placeHighlight.transform.position = cam.ScreenToWorldPoint(Input.mousePosition);
                 Debug.Log("Sate is: " + currentState);
-                break;
+                    break;
 
-            case cursorState.Third:
+            case cursorState.ColorHouse:
                 ChangeCursor(2);
+                placing.placingColorHouse = true;
                 Debug.Log("Sate is: " + currentState);
                 break;
 
@@ -75,7 +85,12 @@ public class CursorManager : MonoBehaviour
         switch (state)
         {
             case cursorState.Conveyor:
-                conveyor.isPlacing = false;
+                //conveyor.isPlacing = false;
+                placing.placingConveyor = false;
+                placeHighlight.enabled = false;
+                break;
+            case cursorState.ColorHouse:
+                placing.placingColorHouse = false;
                 break;
         }
     }
