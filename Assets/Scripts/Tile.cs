@@ -8,14 +8,15 @@ public class Tile : MonoBehaviour
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private GameObject highlight;
     public ConveyorBeltScript conveyor;
-    //private GameManager _gameManager;
-    private GameObject _gamemanager;
+    private GameManager _gameManager;
 
     private void Start()
     {
         //_gamemanager = GetComponent<GameManager>();
         _gamemanager = GameObject.Find("GameManager");
         //conveyor = GameObject.Find("ConveyorBelt").GetComponent<ConveyorBeltScript>();
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        conveyor = GameObject.Find("ConveyorBelt").GetComponent<ConveyorBeltScript>();
     }
 
     public void Init(bool isOffset) 
@@ -27,9 +28,8 @@ public class Tile : MonoBehaviour
     {
         highlight.SetActive(true);
         conveyor.currentTile = this.gameObject;
-        //GamemanagerScript.GetComponent<scriptnamn>.variabelnamn = mig själv
-        _gamemanager.GetComponent<GameManager>().lastTile = this.gameObject;
-        Debug.Log(_gamemanager.GetComponent<GameManager>().lastTile);
+        _gameManager.lastTile = this.gameObject;
+        Debug.Log(_gameManager.GetComponent<GameManager>().lastTile);
     }
 
     void OnMouseExit()
