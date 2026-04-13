@@ -265,11 +265,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2564469918481039289, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.92
+      value: 10.49
       objectReference: {fileID: 0}
     - target: {fileID: 2564469918481039289, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.33
+      value: 12.1
       objectReference: {fileID: 0}
     - target: {fileID: 2564469918481039289, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -303,6 +303,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3391456172395756615, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: colorA.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391456172395756615, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: colorA.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391456172395756615, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: colorA.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391456172395756615, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: colorB.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391456172395756615, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: colorB.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391456172395756615, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: colorB.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4954386181266185610, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
       propertyPath: m_Name
       value: ConveyerItem
@@ -315,6 +339,42 @@ PrefabInstance:
       propertyPath: tileToCheckFor
       value: 
       objectReference: {fileID: 11400000, guid: 237b9828e89b65040a557fcc521bd878, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: tileCheck.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a1a61a2526aaee74e9024d66ece5eb2a, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 62e293c48b8b4ba449c9e98dd83f706a, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f7a6fc8cea0c8c4c934aa2ed54cf362, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ac6d4c0ab9b4ea2489d618fbc9176249, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e00654c75321534689fc5b810f9af69, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2cfa32ce7f1f28c4ab5dcb98bcb358ef, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 03edafaa24208ff448639e1418b1399e, type: 2}
+    - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+      propertyPath: 'tileCheck.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c42992b309d94ba4d882268d5eac51c8, type: 2}
     - target: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
       propertyPath: tileToCheckFor.Array.size
       value: 8
