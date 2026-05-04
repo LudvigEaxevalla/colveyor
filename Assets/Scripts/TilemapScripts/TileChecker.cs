@@ -32,32 +32,35 @@ public class TileChecker : MonoBehaviour
         Vector3Int up = pos + new Vector3Int(0, 1, 0);
         Vector3Int down = pos + new Vector3Int(0, -1, 0);
 
-        bool goingUp = false;
-        bool goingRight = false;
+        int tRight = 0;
+        int tDown = 1;
+        int tLeft = 2;
+        int tUp = 3;
+
+        int TL = 4;
+        int TR = 5;
+        int BR = 6;
+        int BL = 7;
 
         //Right, Down, Left, Up
-        if (tile == tileCheck[0])
+        if (tile == tileCheck[tRight])
         {
             transform.Translate((Vector3.right * Time.deltaTime * speed));
-            goingRight = true;
         }
 
-        else if (tile == tileCheck[1])
+        else if (tile == tileCheck[tDown])
         {
             transform.Translate((Vector3.down * Time.deltaTime * speed));
-            goingUp = false;
         }
 
-        else if (tile == tileCheck[2])
+        else if (tile == tileCheck[tLeft])
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
-            goingRight = false;
         }
 
-        else if (tile == tileCheck[3])
+        else if (tile == tileCheck[tUp])
         {
             transform.Translate((Vector3.up * Time.deltaTime * speed));
-            goingUp = true;
         }
 
 
@@ -65,71 +68,52 @@ public class TileChecker : MonoBehaviour
         //Corners
 
         // Top right corner
-        if (tileMap.GetTile(left) && tile == tileCheck[5] && !goingRight)
+        if (tileMap.GetTile(left) == tileCheck[tRight] && tile == tileCheck[TR] || tileMap.GetTile(down) == tileCheck[BL] && tileCheck[TR])
         {
             transform.Translate((Vector3.down * Time.deltaTime * speed));
-            goingUp = false;
-            goingRight = false;
 
         }
 
-        else if (tileMap.GetTile(down) && tile == tileCheck[5] && goingUp)
+        else if (tileMap.GetTile(down) == tileCheck[tUp] && tile == tileCheck[TR] || tileMap.GetTile(down) == tileCheck[BL] && tile == tileCheck[TR] && tileMap.GetTile(left) == tileCheck[tLeft])
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
-            goingRight = false;
-            goingUp = false;
 
         }
 
         // Bottom right corner
 
-        else if (tileMap.GetTile(up) && tile == tileCheck[6] && !goingUp)
+        else if (tileMap.GetTile(up) == tileCheck[tDown] && tile == tileCheck[BR] || tileMap.GetTile(up) == tileCheck[TL] && tile == tileCheck[BR] && tileMap.GetTile(left) == tileCheck[tLeft])
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
-            goingRight = false;
-            goingUp = true;
         }
 
-        else if (tileMap.GetTile(left) && tile == tileCheck[6] && goingRight)
+        else if (tileMap.GetTile(left) == tileCheck[tRight] && tile == tileCheck[BR])
         {
             transform.Translate((Vector3.up * Time.deltaTime * speed));
-            goingUp = true;
-            goingRight = false;
         }
 
         // Bottom left corner
 
-        else if (tileMap.GetTile(right) && tile == tileCheck[7] && !goingRight)
+        else if (tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[BL] || tileMap.GetTile(up) == tileCheck[TR] && tile == tileCheck[BL])
         {
             transform.Translate((Vector3.up * Time.deltaTime * speed));
-            goingUp = true;
-            goingRight = false;
         }
 
-        else if (tileMap.GetTile(up) && tile == tileCheck[7] && !goingUp)
+        else if (tileMap.GetTile(up)  == tileCheck[tDown] && tile == tileCheck[BL])
         {
             transform.Translate((Vector3.right * Time.deltaTime * speed));
-            goingRight = true;
-            goingUp = false;
         }
 
         // Top left corner
 
-        else if (tileMap.GetTile(down) && tile == tileCheck[4] && goingUp)
+        else if (tileMap.GetTile(down) == tileCheck[tUp] && tile == tileCheck[TL] || tileMap.GetTile(down) == tileCheck[BR] && tile == tileCheck[TL] && tileMap.GetTile(right) == tileCheck[tRight])
         {
             transform.Translate((Vector3.right * Time.deltaTime * speed));
-            goingRight = true;
-            goingUp = false;
         }
 
-        else if (tileMap.GetTile(right) && tile == tileCheck[4] && !goingRight)
+        else if (tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[TL])
         {
             transform.Translate((Vector3.down * Time.deltaTime * speed));
-            goingUp = false;
-            goingRight = false;
         }
-
-
-        Debug.Log("Looking " + tileMap.GetTile(right));
     }
 }
