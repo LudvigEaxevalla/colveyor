@@ -42,10 +42,15 @@ public class TileChecker : MonoBehaviour
         int BR = 6;
         int BL = 7;
 
+        bool headingLeft = false;
+        bool headingRight = false;
+
         //Right, Down, Left, Up
         if (tile == tileCheck[tRight])
         {
             transform.Translate((Vector3.right * Time.deltaTime * speed));
+            headingRight = true;
+            headingLeft = false;
         }
 
         else if (tile == tileCheck[tDown])
@@ -56,6 +61,8 @@ public class TileChecker : MonoBehaviour
         else if (tile == tileCheck[tLeft])
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
+            headingRight = false;
+            headingLeft = true;
         }
 
         else if (tile == tileCheck[tUp])
@@ -68,13 +75,17 @@ public class TileChecker : MonoBehaviour
         //Corners
 
         // Top right corner
-        if (tileMap.GetTile(left) == tileCheck[tRight] && tile == tileCheck[TR] || tileMap.GetTile(down) == tileCheck[BL] && tileCheck[TR])
+        if (tileMap.GetTile(left) == tileCheck[tRight] && tile == tileCheck[TR] || 
+            tileMap.GetTile(down) == tileCheck[BL] && tileMap.GetTile(left) == tileCheck[tRight] && tile == tileCheck[TR] ||
+            tileMap.GetTile(left) == tileCheck[BL] && tile == tileCheck[TR] && headingRight)
         {
             transform.Translate((Vector3.down * Time.deltaTime * speed));
 
         }
 
-        else if (tileMap.GetTile(down) == tileCheck[tUp] && tile == tileCheck[TR] || tileMap.GetTile(down) == tileCheck[BL] && tile == tileCheck[TR] && tileMap.GetTile(left) == tileCheck[tLeft])
+        else if (tileMap.GetTile(down) == tileCheck[tUp] && tile == tileCheck[TR] || 
+            tileMap.GetTile(down) == tileCheck[BL] && tile == tileCheck[TR] && tileMap.GetTile(left) == tileCheck[tLeft] ||
+            tileMap.GetTile(left) == tileCheck[BL] && tile == tileCheck[TR] && headingLeft)
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
 
@@ -82,36 +93,48 @@ public class TileChecker : MonoBehaviour
 
         // Bottom right corner
 
-        else if (tileMap.GetTile(up) == tileCheck[tDown] && tile == tileCheck[BR] || tileMap.GetTile(up) == tileCheck[TL] && tile == tileCheck[BR] && tileMap.GetTile(left) == tileCheck[tLeft])
+        else if (tileMap.GetTile(up) == tileCheck[tDown] && tile == tileCheck[BR] || 
+            tileMap.GetTile(up) == tileCheck[TL] && tile == tileCheck[BR] && tileMap.GetTile(left) == tileCheck[tLeft] ||
+            tileMap.GetTile(left) == tileCheck[TL] && tile == tileCheck[BR] && headingLeft)
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
         }
 
-        else if (tileMap.GetTile(left) == tileCheck[tRight] && tile == tileCheck[BR])
+        else if (tileMap.GetTile(left) == tileCheck[tRight] && tile == tileCheck[BR] || 
+            tileMap.GetTile(up) == tileCheck[TL] && tile == tileCheck[BR] && tileMap.GetTile(left) == tileCheck[tRight] ||
+            tileMap.GetTile(up) == tileCheck[TL] && tile == tileCheck[BR] && headingRight)
         {
             transform.Translate((Vector3.up * Time.deltaTime * speed));
         }
 
         // Bottom left corner
 
-        else if (tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[BL] || tileMap.GetTile(up) == tileCheck[TR] && tile == tileCheck[BL])
+        else if (tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[BL] || 
+            tileMap.GetTile(up) == tileCheck[TR] && tile == tileCheck[BL] && tileMap.GetTile(right) == tileCheck[tLeft] ||
+            tileMap.GetTile(up) == tileCheck[TR] && tile == tileCheck[BL] && headingLeft)
         {
             transform.Translate((Vector3.up * Time.deltaTime * speed));
         }
 
-        else if (tileMap.GetTile(up)  == tileCheck[tDown] && tile == tileCheck[BL])
+        else if (tileMap.GetTile(up)  == tileCheck[tDown] && tile == tileCheck[BL] || 
+            tileMap.GetTile(right) == tileCheck[tRight] && tile == tileCheck[BL] && tileMap.GetTile(up) == tileCheck[TR] ||
+            tileMap.GetTile(right) == tileCheck[TR] && tile == tileCheck[BL] && headingRight) 
         {
             transform.Translate((Vector3.right * Time.deltaTime * speed));
         }
 
         // Top left corner
 
-        else if (tileMap.GetTile(down) == tileCheck[tUp] && tile == tileCheck[TL] || tileMap.GetTile(down) == tileCheck[BR] && tile == tileCheck[TL] && tileMap.GetTile(right) == tileCheck[tRight])
+        else if (tileMap.GetTile(down) == tileCheck[tUp] && tile == tileCheck[TL] || 
+            tileMap.GetTile(down) == tileCheck[BR] && tile == tileCheck[TL] && tileMap.GetTile(right) == tileCheck[tRight] ||
+            tileMap.GetTile(right) == tileCheck[BR] && tile == tileCheck[TL] && headingRight)
         {
             transform.Translate((Vector3.right * Time.deltaTime * speed));
         }
 
-        else if (tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[TL])
+        else if (tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[TL] || 
+            tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[TL] && tileMap.GetTile(down) == tileCheck[BR] ||
+            tileMap.GetTile(right) == tileCheck[BR] && tile == tileCheck[TL] && headingLeft)
         {
             transform.Translate((Vector3.down * Time.deltaTime * speed));
         }
