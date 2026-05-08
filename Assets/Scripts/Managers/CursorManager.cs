@@ -69,7 +69,7 @@ public class CursorManager : MonoBehaviour
 
             case cursorState.ColorHouse:
                 ChangeCursor(2);
-                placing.placingColorHouse = true;
+                placing.placingHouse = true;
                 Debug.Log("Sate is: " + currentState);
                 break;
 
@@ -90,7 +90,7 @@ public class CursorManager : MonoBehaviour
                 placeHighlight.enabled = false;
                 break;
             case cursorState.ColorHouse:
-                placing.placingColorHouse = false;
+                placing.placingHouse = false;
                 break;
         }
     }

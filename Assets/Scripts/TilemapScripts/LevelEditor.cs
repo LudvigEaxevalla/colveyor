@@ -5,26 +5,32 @@ using UnityEngine.Tilemaps;
 public class LevelEditor : MonoBehaviour
 {
     [SerializeField] Tilemap currentTilemap;
+    [SerializeField] Tilemap housetilemap;
+    [SerializeField] Tilemap conveyorTilemap;
     public List<TileBase> conDirection;
     [HideInInspector] public int rotationIndex = 0;
     public List<TileBase> corners = new();
     [HideInInspector] public int cornerIndex;
+    public List<TileBase> houses;
     public bool placingConveyor;
-    public bool placingColorHouse;
+    public bool placingHouse;
     public CursorManager cursor;
     [SerializeField] Camera cam;
+
+    public GameObject houseObject;
 
     private void Update()
     {
         if (placingConveyor)
             PlacingConveyor();
 
-        if (placingColorHouse)
+        if (placingHouse)
             PlacingColorHouse();
     }
 
     void PlacingConveyor()
     {
+        currentTilemap = conveyorTilemap;
         Vector3Int pos = currentTilemap.WorldToCell(cam.ScreenToWorldPoint(Input.mousePosition));
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -46,7 +52,13 @@ public class LevelEditor : MonoBehaviour
 
     void PlacingColorHouse()
     {
+        currentTilemap = housetilemap;
         Vector3Int pos = currentTilemap.WorldToCell(cam.ScreenToWorldPoint(Input.mousePosition));
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            rotationIndex = (rotationIndex + 1) % 2;
+        }
 
         if (Input.GetMouseButtonDown(0))
             PlaceTile(pos);
@@ -57,7 +69,19 @@ public class LevelEditor : MonoBehaviour
 
     void PlaceTile(Vector3Int pos)
     {
-        currentTilemap.SetTile(pos, conDirection[rotationIndex]);
+        if (currentTilemap == conveyorTilemap)
+        {
+             currentTilemap.SetTile(pos, conDirection[rotationIndex]);
+        }
+
+        else if (currentTilemap == housetilemap)
+        {
+            currentTilemap.SetTile(pos, houses[rotationIndex]);
+            if (houses[0])
+            {
+                GameObject.Instantiate(houseObject, pos, transform.rotation);
+            }
+        }
     }
 
     void DeleteTile(Vector3Int pos)
