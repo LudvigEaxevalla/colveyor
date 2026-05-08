@@ -13,10 +13,9 @@ public class Tile : MonoBehaviour
     private void Start()
     {
         //_gamemanager = GetComponent<GameManager>();
-        _gamemanager = GameObject.Find("GameManager");
         //conveyor = GameObject.Find("ConveyorBelt").GetComponent<ConveyorBeltScript>();
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        conveyor = GameObject.Find("ConveyorBelt").GetComponent<ConveyorBeltScript>();
+      //  conveyor = GameObject.Find("ConveyorBelt").GetComponent<ConveyorBeltScript>();
     }
 
     public void Init(bool isOffset) 
