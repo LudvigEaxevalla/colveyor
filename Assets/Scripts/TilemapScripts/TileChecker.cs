@@ -10,6 +10,8 @@ public class TileChecker : MonoBehaviour
     public List<TileBase> tileCheck;
     private int tileIndex;
     int speed = 3;
+    bool headingLeft = false;
+    bool headingRight = false;
 
 
     void Update()
@@ -42,8 +44,6 @@ public class TileChecker : MonoBehaviour
         int BR = 6;
         int BL = 7;
 
-        bool headingLeft = false;
-        bool headingRight = false;
 
         //Right, Down, Left, Up
         if (tile == tileCheck[tRight])
@@ -85,7 +85,8 @@ public class TileChecker : MonoBehaviour
 
         else if (tileMap.GetTile(down) == tileCheck[tUp] && tile == tileCheck[TR] || 
             tileMap.GetTile(down) == tileCheck[BL] && tile == tileCheck[TR] && tileMap.GetTile(left) == tileCheck[tLeft] ||
-            tileMap.GetTile(left) == tileCheck[BL] && tile == tileCheck[TR] && headingLeft)
+            tileMap.GetTile(left) == tileCheck[BL] && tile == tileCheck[TR] && headingLeft ||
+            tileMap.GetTile(down) == tileCheck[tUp] && tileMap.GetTile(left) == tileCheck[BL] && tile == tileCheck[TR] && headingRight)
         {
             transform.Translate((Vector3.left * Time.deltaTime * speed));
 
@@ -111,7 +112,8 @@ public class TileChecker : MonoBehaviour
 
         else if (tileMap.GetTile(right) == tileCheck[tLeft] && tile == tileCheck[BL] || 
             tileMap.GetTile(up) == tileCheck[TR] && tile == tileCheck[BL] && tileMap.GetTile(right) == tileCheck[tLeft] ||
-            tileMap.GetTile(up) == tileCheck[TR] && tile == tileCheck[BL] && headingLeft)
+            tileMap.GetTile(up) == tileCheck[TR] && tile == tileCheck[BL] && headingLeft ||
+            tileMap.GetTile(up) == tileCheck[tUp] && tile == tileCheck[BL] && headingLeft)
         {
             transform.Translate((Vector3.up * Time.deltaTime * speed));
         }
@@ -138,5 +140,8 @@ public class TileChecker : MonoBehaviour
         {
             transform.Translate((Vector3.down * Time.deltaTime * speed));
         }
+
+        Debug.Log("Heading Left: " + headingLeft);
+        Debug.Log("Heading Right: " + headingRight);
     }
 }
