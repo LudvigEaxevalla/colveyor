@@ -13,19 +13,20 @@ public class LevelEditor : MonoBehaviour
     [HideInInspector] public int cornerIndex;
     public List<TileBase> houses;
     public bool placingConveyor;
-    public bool placingHouse;
+    public bool placingBuilding;
     public CursorManager cursor;
     [SerializeField] Camera cam;
 
     public GameObject houseObject;
+    public GameObject mixerObject;
 
     private void Update()
     {
         if (placingConveyor)
             PlacingConveyor();
 
-        if (placingHouse)
-            PlacingColorHouse();
+        if (placingBuilding)
+            PlacingBuilding();
     }
 
     void PlacingConveyor()
@@ -50,7 +51,7 @@ public class LevelEditor : MonoBehaviour
         }
     }
 
-    void PlacingColorHouse()
+    void PlacingBuilding()
     {
         currentTilemap = housetilemap;
         Collider2D hit;
@@ -92,9 +93,14 @@ public class LevelEditor : MonoBehaviour
         else if (currentTilemap == housetilemap)
         {
             currentTilemap.SetTile(pos, houses[rotationIndex]);
-            if (houses[0])
+            if (rotationIndex == 0)
             {
                 GameObject.Instantiate(houseObject, pos, transform.rotation);
+            }
+
+            else if (rotationIndex == 1)
+            {
+                GameObject.Instantiate(mixerObject, pos, transform.rotation);
             }
         }
     }

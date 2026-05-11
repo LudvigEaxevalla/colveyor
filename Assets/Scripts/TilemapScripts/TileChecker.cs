@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -22,7 +23,7 @@ public class TileChecker : MonoBehaviour
     }
 
 
-    void GetDirection(Vector3Int pos, int speed)
+    public void GetDirection(Vector3Int pos, int speed)
     {
 
         TileBase tile = tileMap.GetTile(pos);

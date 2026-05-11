@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 7855982303241651313}
   - component: {fileID: 3222737438226085294}
   - component: {fileID: 6104101950907607594}
-  - component: {fileID: 6697559627047134939}
   - component: {fileID: 2071435707843956297}
   - component: {fileID: 8110771882475422754}
   m_Layer: 0
-  m_Name: HouseSquare
+  m_Name: MixerSquare
   m_TagString: building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,20 +136,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5625, y: 1.5625}
   m_EdgeRadius: 0
---- !u!114 &6697559627047134939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8398450743891919818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5da79bb14b64474ab75b0fc60098df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  output: {fileID: 4954386181266185610, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
-  tileCheck: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
 --- !u!70 &2071435707843956297
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -199,7 +184,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 25cead23bbd256742bb742087b64b1d5, type: 3}
+  m_Resource: {fileID: 8300000, guid: 893589ee8c4feb840a266788748cab4c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
