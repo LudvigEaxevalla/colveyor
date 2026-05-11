@@ -53,7 +53,11 @@ public class LevelEditor : MonoBehaviour
     void PlacingColorHouse()
     {
         currentTilemap = housetilemap;
+        Collider2D hit;
         Vector3Int pos = currentTilemap.WorldToCell(cam.ScreenToWorldPoint(Input.mousePosition));
+        Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log(pos);
+        hit = Physics2D.OverlapPoint(mousePos);
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -64,7 +68,18 @@ public class LevelEditor : MonoBehaviour
             PlaceTile(pos);
 
         if (Input.GetMouseButtonDown(1))
+        {
             DeleteTile(pos);
+            if (hit != null)
+            {
+                if (hit.transform.tag == "building")
+                {
+                     Destroy(hit.transform.gameObject);
+                }
+            }
+            
+        }
+      
     }
 
     void PlaceTile(Vector3Int pos)
