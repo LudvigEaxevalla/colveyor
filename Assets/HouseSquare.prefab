@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6697559627047134939}
   - component: {fileID: 2071435707843956297}
   - component: {fileID: 8110771882475422754}
+  - component: {fileID: 8694866802711503410}
   m_Layer: 0
   m_Name: HouseSquare
   m_TagString: building
@@ -150,7 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   output: {fileID: 4954386181266185610, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
-  tileCheck: {fileID: 5921364911307111236, guid: c9fbb1bf1b130784ba9818dc1a095b5b, type: 3}
+  active: 0
+  spawnTime: 2
 --- !u!70 &2071435707843956297
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -276,3 +278,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &8694866802711503410
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398450743891919818}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

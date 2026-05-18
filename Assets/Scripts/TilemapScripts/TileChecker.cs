@@ -142,7 +142,5 @@ public class TileChecker : MonoBehaviour
             transform.Translate((Vector3.down * Time.deltaTime * speed));
         }
 
-        Debug.Log("Heading Left: " + headingLeft);
-        Debug.Log("Heading Right: " + headingRight);
     }
 }

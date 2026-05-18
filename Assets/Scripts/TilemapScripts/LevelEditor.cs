@@ -145,4 +145,5 @@ public class LevelEditor : MonoBehaviour
         else
             currentTilemap.SetTile(pos, conDirection[rotationIndex]); 
     }
+
 }
